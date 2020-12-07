@@ -3,36 +3,11 @@
 #include <vector>
 #include <math.h>
 #include <algorithm>
+
+
 #include "alg.h"
 
 using namespace std;
-
-//from geeksforgeeks
-bool isPerfectSquare(int x) 
-{ 
-    int s = sqrt(x); 
-    return (s * s == x); 
-} 
-
-//from geeksforgeeks
-bool isFibonacci(int n) 
-{ 
-    // n is Fibinacci if one of 5*n*n + 4 or 5*n*n - 4 or both 
-    // is a perferct square 
-    return isPerfectSquare(5 * n * n + 4) || isPerfectSquare(5 * n * n - 4); 
-} 
-template<typename T, typename R>
-bool Fib (T a, R b) {
-	while(a != b){
-        if(isFibonacci(*a)){
-            a++;
-        }
-        else{
-            return false;
-        }
-    }
-    return true;
-}
 
 
 
@@ -55,11 +30,11 @@ int main(){
     //     }
     // }
     
-    //checking transform2
-    // int ia[]={1,2,3,10,8,6};
+    // checking transform2
+    // int ia[]={2,2,3,10,8,6,10,20,25,30,50};
     // vector<int> vec(100); 
     // auto p = Transform2(begin(ia), end(ia), vec.begin(),[](const int x, const int y){return x + y;});
-    // cout<<*(p-3)<<endl;
+    // cout<<*(p-1)<<endl;
 
     //checking fibbunatchi
     // int ia[] = {144};
