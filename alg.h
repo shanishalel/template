@@ -7,18 +7,18 @@ using namespace std;
 /**gets iterator b (begin) and iterator e (end) 
 return true - if the the set is seb string of fibunnatchi set 
 else -return false **/
-template<typename T, typename R>
-bool Fib (T a, R b) {
-	while(a != b){
-        if(a+(a++)==(a+2)){
-            a++;
-        }
-        else{
-            return false;
-        }
-    }
-    return true;
-}
+// template<typename T, typename R>
+// bool Fib (T a, R b) {
+// 	while(a != b){
+//         if(a+(a++)==(a+2)){
+//             a++;
+//         }
+//         else{
+//             return false;
+//         }
+//     }
+//     return true;
+// }
 
 
 
@@ -42,9 +42,13 @@ bool Fib (T a, R b) {
 
 /* getting iterator b to begin and e to end , and iterator 
 b2 to  begin of container 2, function f that gets 2 parameters  */
-template <typename it, function fun > it Transform2(it b, it e, it b2, fun f ){
-  
-  
-  
+
+template <typename it1,typename it2 ,typename func > it2 Transform2
+(it1 b, it1 e, it2 b2, func f ){
+  while(b!=e){
+    *b2=f(*(b),*(b+1));
+    b2++;b=b+2;
+  }
+  return b2;
   
 }
